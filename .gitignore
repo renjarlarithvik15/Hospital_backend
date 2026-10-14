@@ -1,0 +1,17 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### IDE & OS ###
+.idea/
+*.iws
+*.iml
+*.ipr
+.vscode/
+.DS_Store
+Thumbs.db
+.git-inner-backup/
+
+### Logs & Env ###
+*.log
+.env
+.env.local

@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: hospital-backend
+    env: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    region: oregon
+    envVars:
+      - key: PORT
+        value: 8080
+      - key: SPRING_DATASOURCE_URL
+        value: jdbc:mysql://mysql-2ae0a1ea-hospitaldatabse.h.aivencloud.com:21813/defaultdb?sslMode=REQUIRED&serverTimezone=UTC&allowPublicKeyRetrieval=true
+      - key: SPRING_DATASOURCE_USERNAME
+        value: avnadmin
+      - key: SPRING_DATASOURCE_PASSWORD
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
